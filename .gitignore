@@ -1,0 +1,81 @@
+#---------------------------
+# Themes
+#---------------------------
+/themes/*
+!/themes/qorp-theme
+
+#---------------------------
+# Plugins
+# Check out WPE's Smart
+# Plugin Manager (SMP)
+#---------------------------
+# Ignore all plugins
+/plugins/*
+!/plugins/qorp-plugin
+
+#---------------------------
+# MU plugins: these are
+# managed by the platform.
+#---------------------------
+/mu-plugins/
+
+#---------------------------
+# Uploads directory
+#---------------------------
+/uploads/
+
+#---------------------------
+# Upgrade files
+#---------------------------
+/upgrade/
+
+#---------------------------
+# OS-specific files
+#---------------------------
+.DS_Store
+.Trashes
+Thumbs.db
+
+#---------------------------
+# Smart Plugin Manager
+#---------------------------
+/.logs/
+
+autoupdater_maintenance_mode_enabled.tmp
+
+#---------------------------
+# large/disallowed file types
+# a CDN should be used for these
+#---------------------------
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi

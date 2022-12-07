@@ -1,0 +1,3 @@
+# Including plugins/themes that we check into git so that the version in github is deployed
+/plugins/custom-plugin
+/themes/custom-theme

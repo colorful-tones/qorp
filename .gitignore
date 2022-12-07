@@ -1,31 +1,33 @@
 #---------------------------
-# Themes
+# WordPress general
+#---------------------------
+/index.php
+
+#---------------------------
+# WordPress themes
 #---------------------------
 /themes/*
 !/themes/qorp-theme
 
 #---------------------------
-# Plugins
-# Check out WPE's Smart
-# Plugin Manager (SMP)
+# WordPress plugins
 #---------------------------
-# Ignore all plugins
 /plugins/*
 !/plugins/qorp-plugin
 
 #---------------------------
-# MU plugins: these are
+# WP MU plugins: these are
 # managed by the platform.
 #---------------------------
 /mu-plugins/
 
 #---------------------------
-# Uploads directory
+# WP uploads directory
 #---------------------------
 /uploads/
 
 #---------------------------
-# Upgrade files
+# WP upgrade files
 #---------------------------
 /upgrade/
 
@@ -37,10 +39,17 @@
 Thumbs.db
 
 #---------------------------
+# Composer
+#---------------------------
+/vendor
+.env
+.env.*
+!.env.example
+
+#---------------------------
 # Smart Plugin Manager
 #---------------------------
 /.logs/
-
 autoupdater_maintenance_mode_enabled.tmp
 
 #---------------------------
@@ -79,3 +88,4 @@ autoupdater_maintenance_mode_enabled.tmp
 *.asf
 *.wmv
 *.avi
+*.log

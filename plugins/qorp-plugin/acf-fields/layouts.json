@@ -1,0 +1,248 @@
+[
+    {
+        "key": "group_6387c4282642a",
+        "title": "Post Wrap-up Layout",
+        "fields": [
+            {
+                "key": "field_6387c42878e1d",
+                "label": "Layouts",
+                "name": "layouts",
+                "aria-label": "",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_638a72a84c077": {
+                        "key": "layout_638a72a84c077",
+                        "name": "call_to_action",
+                        "label": "Call to action",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_638a72d04c078",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Appears above the main, larger heading",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_638a72ed4c079",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Leverage Agile Frameworks",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_638a73474c07b",
+                                "label": "Button",
+                                "name": "button",
+                                "aria-label": "",
+                                "type": "group",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_638a735f4c07c",
+                                        "label": "Button text",
+                                        "name": "button_text",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "Learn more",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_638a73764c07d",
+                                        "label": "Button link",
+                                        "name": "button_link",
+                                        "aria-label": "",
+                                        "type": "url",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_6387c5ed78e21": {
+                        "key": "layout_6387c5ed78e21",
+                        "name": "trust_signals",
+                        "label": "Trust Signals",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_6387c62f78e22",
+                                "label": "Logo",
+                                "name": "logo",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "",
+                                "button_label": "Add Row",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_6387c6db78e23",
+                                        "label": "Logo",
+                                        "name": "logo",
+                                        "aria-label": "",
+                                        "type": "image",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "library": "all",
+                                        "min_width": "",
+                                        "min_height": "",
+                                        "min_size": "",
+                                        "max_width": "",
+                                        "max_height": "",
+                                        "max_size": "",
+                                        "mime_types": "",
+                                        "preview_size": "medium",
+                                        "parent_repeater": "field_6387c62f78e22"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_638a739adf578": {
+                        "key": "layout_638a739adf578",
+                        "name": "related_posts",
+                        "label": "Related Posts",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_638a7485c3894",
+                                "label": "Posts",
+                                "name": "posts",
+                                "aria-label": "",
+                                "type": "relationship",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "post_type": [
+                                    "post"
+                                ],
+                                "taxonomy": "",
+                                "filters": [
+                                    "search",
+                                    "post_type",
+                                    "taxonomy"
+                                ],
+                                "return_format": "object",
+                                "min": "",
+                                "max": "",
+                                "elements": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "min": "",
+                "max": "",
+                "button_label": "Add Row"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": -1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Layout",
+        "show_in_rest": 0
+    }
+]

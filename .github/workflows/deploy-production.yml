@@ -1,0 +1,22 @@
+name: Deploy to WP Engine production environment
+on:
+  push:
+    branches:
+     - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: GitHub Action Deploy to WP Engine
+      uses: wpengine/github-action-wpe-site-deploy@v3
+      with:
+        # Deploy vars
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+        WPE_ENV: qorp
+        # Deploy Options
+        REMOTE_PATH: "wp-content/"
+        FLAGS: -azvr --inplace --delete --include-from config/include.txt --exclude=".*" --exclude-from config/exclude.txt
+        PHP_LINT: TRUE
+        SCRIPT: wp-content/config/post-deploy.sh

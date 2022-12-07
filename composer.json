@@ -1,0 +1,53 @@
+{
+    "name": "wpe/qorp",
+    "description": "Tutorial to demonstrate how to manage dependencies with Composer and deploy to WP Engine.",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "6.0.5",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t={%VERSION}"
+                }
+            }
+        },
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0",
+        "ffraenz/private-composer-installer": "^5.0",
+        "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "plugins/{$name}": [
+                "type:wordpress-plugin"
+            ]
+        },
+        "private-composer-installer": {
+            "dotenv-path": ".",
+            "dotenv-name": ".env"
+        }
+    },
+    "license": "GPL-2.0+",
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "ffraenz/private-composer-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "wp-coding-standards/wpcs": "^2.3"
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="PHP Coding Standards for Qorp">
+	<arg name="extensions" value="php" />
+	<arg name="colors" />
+	<arg value="s" />
+	<arg value="p" />
+
+	<rule ref="WordPress-Extra" />
+
+	<file>themes</file>
+	<file>plugins/qorp-plugin</file>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>

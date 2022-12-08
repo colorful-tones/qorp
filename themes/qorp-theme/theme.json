@@ -238,7 +238,7 @@
 					"radius": "var(--wp--custom--border-radius--xl, 999px)"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--body-copy)",
+					"background": "var(--wp--preset--color--primary)",
 					"text": "var(--wp--preset--color--base)"
 				},
 				"spacing": {

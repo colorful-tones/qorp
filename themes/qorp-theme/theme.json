@@ -34,6 +34,13 @@
 			]
 		},
 		"custom": {
+			"borderRadius": {
+				"sm": "4px",
+				"md": "8px",
+				"lg": "20px",
+				"xl": "999px"
+			},
+			"borderTransparent": "1px solid rgba(53, 80, 48, 0.18)",
 			"fontWeight": {
 				"black": 900,
 				"extraBold": 800,
@@ -228,7 +235,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "99px"
+					"radius": "var(--wp--custom--border-radius--xl, 999px)"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--body-copy)",
@@ -279,7 +286,8 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--headings)"
+					"fontFamily": "var(--wp--preset--font-family--headings)",
+					"lineHeight": "var(--wp--custom--line-height--heading)"
 				}
 			},
 			"link": {

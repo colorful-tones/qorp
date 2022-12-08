@@ -1,7 +1,7 @@
 /*
  * Theme Name: Qorp theme
  * Author: Damon Cook
- * Version: 0.1.1
+ * Version: 0.1.2
  * Text Domain: qorp
 */
 
@@ -72,66 +72,48 @@
 	text-transform: uppercase;
 }
 
-.cta {
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-	padding-bottom: 2rem;
-	padding-top: 2rem;
+.entry-header {
+	display: grid;
+	grid-template-areas: "stack";
 }
 
-.qorp-layouts-cta {
-	text-align: center;
-}
-
-.op-br {
-	--op-bw: 10px;
-	--op-filter: blur(4px);
-
-	border-radius: 20px;
-	box-sizing: border-box;
+.entry-header > * {
+	grid-area: stack;
 	overflow: hidden;
-	padding: var(--wp--preset--spacing--lg);
-	position: relative;
 }
 
-.op-br::before,
-.op-br::after {
-	background: url('./assets/images/cta-bg.png') 50% / cover border-box padding-box;
-	border: solid var(--op-bw) rgba(255, 255, 255, .3);
-	border-radius: inherit;
-	content: '';
-	inset: 0;
-	position: absolute;
-	z-index: auto;
-}
-
-.op-br::before {
-	background-clip: border-box;
-	border-color: transparent;
-	-webkit-filter: var(--op-filter);
-	filter: var(--op-filter);
-}
-
-.op-br > * {
-	position: relative;
-	z-index: 1;
-}
-
-.br {
-	border-radius: 20px;
-	overflow: hidden;
-	position: relative;
-}
-
-.br img {
-	aspect-ratio: 3 / 2;
+.entry-header img {
+	aspect-ratio: var(--aspect-ratio);
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
 
-.br::before {
-	border: solid 10px rgba(255, 255, 255, 0.3);
-	inset: 0;
+@media (min-width:720px) {
+	.css-cols {
+		column-count: 2;
+		column-gap: var(--wp--preset--spacing--lg);
+	}
+}
+
+.css-cols > :first-child {
+	margin-top: 0;
+}
+
+.avatar {
+	border-radius: 50%;
+}
+
+/* Make entire clickable */
+.related-posts .wp-block-column {
+	position: relative;
+}
+
+.related-posts__link::before {
+	bottom: 0;
+	content: '';
+	left: 0;
+	right: 0;
 	position: absolute;
+	top: 0;
 }

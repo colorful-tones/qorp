@@ -35,6 +35,7 @@ add_action( 'after_setup_theme', 'qorp_theme_setup' );
 // Enqueue style sheet.
 function qorp_enqueue_style_sheet() {
 	wp_enqueue_style( 'qorp-theme', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'qorp-theme', get_template_directory_uri() . '/dist/frontend.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'qorp_enqueue_style_sheet' );
 

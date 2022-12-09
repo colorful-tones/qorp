@@ -1,0 +1,16 @@
+{
+  "name": "qorp-theme",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "targets": {
+    "frontend": {
+      "source": "assets/js/frontend.js"
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.8.1",
+    "stickybits": "^3.7.11"
+  }
+}

@@ -89,3 +89,6 @@ autoupdater_maintenance_mode_enabled.tmp
 *.wmv
 *.avi
 *.log
+
+.parcel-cache
+node_modules

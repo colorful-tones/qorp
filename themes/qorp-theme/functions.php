@@ -6,32 +6,6 @@
  * @subpackage QORP
  */
 
-if ( ! function_exists( 'qorp_setup' ) ) {
-
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 *
-	 * @return void
-	 */
-	function qorp_theme_setup() {
-
-		// Enqueue editor styles.
-		add_editor_style(
-			array(
-				'./style.css',
-			)
-		);
-
-		remove_theme_support( 'block-templates' );
-
-	}
-}
-add_action( 'after_setup_theme', 'qorp_theme_setup' );
-
 // Enqueue style sheet.
 function qorp_enqueue_style_sheet() {
 	wp_enqueue_style( 'qorp-theme', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );

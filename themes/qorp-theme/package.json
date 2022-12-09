@@ -10,7 +10,6 @@
     }
   },
   "devDependencies": {
-    "parcel": "^2.8.1",
-    "stickybits": "^3.7.11"
+    "parcel": "^2.8.1"
   }
 }

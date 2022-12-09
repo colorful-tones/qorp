@@ -120,16 +120,10 @@
 
 /* Sticky header */
 .site-header {
-	height: 88px;
-	position: fixed;
+	position: sticky;
 	top: 0;
-	transition: all 150ms ease-in-out;
 	width: 100%;
 	z-index: 99;
-}
-
-.site-header + * {
-	margin-top: 88px;
 }
 
 /* Adjust for WP Admin bar */
@@ -137,16 +131,8 @@
 	top: 46px;
 }
 
-.logged-in.admin-bar .site-header.js-is-sticky {
-	top: 0;
-}
-
 @media (min-width:600px) {
 	.logged-in.admin-bar .site-header {
-		top: 46px;
-	}
-
-	.logged-in.admin-bar .site-header.js-is-sticky {
 		top: 46px;
 	}
 }
@@ -155,24 +141,19 @@
 	.logged-in.admin-bar .site-header {
 		top: 32px;
 	}
-
-	.logged-in.admin-bar .site-header.js-is-sticky {
-		top: 32px;
-	}
 }
 
-.site-header.js-is-sticky {
+.site-header > .wp-block-group {
+	transition: all 150ms ease-in-out;
+}
+
+.scroll-down .site-header > .wp-block-group {
+	transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .site-header > .wp-block-group {
+	background-color: hsla(0, 0%, 0%, 0.3) !important;
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
-	background-color: hsla(0, 0%, 0%, 0.5) !important;
-}
-
-.scroll-down .site-header.js-is-sticky {
-	opacity: 0;
-	transform: translate3d(0, -30px, 0);
-}
-
-.scroll-up .site-header.js-is-sticky {
-	opacity: 1;
 	transform: translate3d(0, 0, 0);
 }

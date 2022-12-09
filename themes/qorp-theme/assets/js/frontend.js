@@ -1,6 +1,6 @@
-import { StickyHeader } from './components/sticky-header';
+import { ScrollListener } from './components/scroll-listener';
 
 /* Run everything when the DOM is available */
 document.addEventListener('DOMContentLoaded', () => {
-	new StickyHeader(document.getElementById('js-sticky-header')); // eslint-disable-line
+	new ScrollListener(); // eslint-disable-line
 });

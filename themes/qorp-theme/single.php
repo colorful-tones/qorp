@@ -7,12 +7,13 @@ while ( have_posts() ) :
 
 	get_template_part( 'template-parts/content/content-single' );
 
-	$layouts = get_field( 'qorp_post_sections' );
+	// ACF - Flexible Content fields.
+	$sections = get_field( 'qorp_post_sections' );
 
-	if ( $layouts ) :
-		foreach ( $layouts as $layout ) :
-			$template = str_replace( '_', '-', $layout['acf_fc_layout'] );
-			get_template_part( 'acf-content/layouts/' . $template . '/' . $template, '', $layout );
+	if ( $sections ) :
+		foreach ( $sections as $section ) :
+			$template = str_replace( '_', '-', $section['acf_fc_layout'] );
+			get_template_part( 'flexible-content/sections/' . $template, '', $section );
 		endforeach;
 	endif;
 

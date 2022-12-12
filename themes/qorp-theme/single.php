@@ -8,7 +8,6 @@ while ( have_posts() ) :
 	get_template_part( 'template-parts/content/content-single' );
 
 	$layouts = get_field( 'qorp_post_sections' );
-	//var_dump( $layouts );
 
 	if ( $layouts ) :
 		foreach ( $layouts as $layout ) :

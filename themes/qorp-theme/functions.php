@@ -13,6 +13,9 @@ function qorp_enqueue_style_sheet() {
 }
 add_action( 'wp_enqueue_scripts', 'qorp_enqueue_style_sheet' );
 
+// Load ALL block style assets even if they're not being used. 🙈
+add_filter( 'should_load_separate_core_block_assets', '__return_false' );
+
 /**
  * Register block styles.
  */

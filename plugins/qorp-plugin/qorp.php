@@ -25,3 +25,24 @@ add_action(
 		acf_add_local_field_group( $field_json );
 	}
 );
+
+// Register our ACF fields for Menu page.
+add_action(
+	'acf/include_fields',
+	function() {
+		$path                     = __DIR__ . '/acf-fields/menu-repeater.json';
+		$field_json               = json_decode( file_get_contents( $path ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$field_json['location']   = array(
+			array(
+				array(
+					'param'    => 'page_template',
+					'operator' => '==',
+					'value'    => 'default',
+				),
+			),
+		);
+		$field_json['local']      = 'json';
+		$field_json['local_file'] = $path;
+		acf_add_local_field_group( $field_json );
+	}
+);

@@ -37,3 +37,19 @@ function qorp_register_block_styles() {
 	}
 }
 add_action( 'init', 'qorp_register_block_styles' );
+
+/**
+ * Enqueue Thickbox dependencies for lightbox.
+ *
+ * @link https://developer.wordpress.org/reference/functions/add_thickbox/
+ *
+ * @return void
+ */
+function qorp_enqueue_thickbox() {
+	// Only on the 'gallery' page.
+	if ( is_page( 'gallery' ) ) {
+		wp_enqueue_script( 'thickbox' );
+		wp_enqueue_style( 'thickbox' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'qorp_enqueue_thickbox' );

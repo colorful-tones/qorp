@@ -1,0 +1,186 @@
+{
+    "key": "group_63e12a5e0e27d",
+    "title": "Page: Menu",
+    "fields": [
+        {
+            "key": "field_63e12a5e5ab3e",
+            "label": "Menu Category",
+            "name": "qorp_menu_category",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_63e12ae65ab3f",
+            "button_label": "Add Menu Category",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63e12ae65ab3f",
+                    "label": "Menu Category Name",
+                    "name": "qorp_menu_category_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Appetizers",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63e12a5e5ab3e"
+                },
+                {
+                    "key": "field_63e12b355ab40",
+                    "label": "Menu Item",
+                    "name": "qorp_menu_item",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "field_63e12b6d5ab42",
+                    "button_label": "Add Menu Item",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_63e12a5e5ab3e",
+                    "sub_fields": [
+                        {
+                            "key": "field_63e12b6d5ab42",
+                            "label": "Title",
+                            "name": "qorp_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "15",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_63e12b355ab40"
+                        },
+                        {
+                            "key": "field_63e12b4c5ab41",
+                            "label": "Price",
+                            "name": "qorp_price",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "10",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": "",
+                            "max": "",
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "$",
+                            "append": "",
+                            "parent_repeater": "field_63e12b355ab40"
+                        },
+                        {
+                            "key": "field_63e12b855ab43",
+                            "label": "Description",
+                            "name": "qorp_description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "65",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": "",
+                            "parent_repeater": "field_63e12b355ab40"
+                        },
+                        {
+                            "key": "field_63e13bc50edd4",
+                            "label": "Diet & Allergens",
+                            "name": "qorp_diet_allergens",
+                            "aria-label": "",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "10",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "gf": "Gluten Free",
+                                "vegetarian": "Vegetarian"
+                            },
+                            "default_value": [],
+                            "return_format": "label",
+                            "allow_custom": 0,
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "save_custom": 0,
+                            "parent_repeater": "field_63e12b355ab40",
+                            "custom_choice_button_text": "Add new choice"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "399"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680188566
+}

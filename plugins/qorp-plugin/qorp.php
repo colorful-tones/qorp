@@ -1,48 +1,48 @@
 <?php
 /**
- * Plugin Name: Qorp plugin
- * Description: Separate functionality from appearance. Qorp's custom stuff.
- * Version: 1.0.0
+ * Plugin Name:       Qorp plugin
+ * Description:       An example plugin for a fictitous client site using ACF.
+ * Requires at least: 6.0
+ * Requires PHP:      7.0
+ * Version:           0.1.0
+ * Author:            Damon Cook
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       qorp-acf
+ *
+ * @package           qorp-acf
  */
 
-// Register our block's fields into ACF.
-add_action(
-	'acf/include_fields',
-	function() {
-		$path                     = __DIR__ . '/acf-fields/layouts.json';
-		$field_json               = json_decode( file_get_contents( $path ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-		$field_json['location']   = array(
-			array(
-				array(
-					'param'    => 'post_type',
-					'operator' => '==',
-					'value'    => 'post',
-				),
-			),
-		);
-		$field_json['local']      = 'json';
-		$field_json['local_file'] = $path;
-		acf_add_local_field_group( $field_json );
-	}
-);
+/**
+ * Set custom ACF JSON save point.
+ *
+ * @link https://www.advancedcustomfields.com/resources/local-json/#saving-explained
+ *
+ * @param string  $path Existing, incoming path.
+ *
+ * @return string $path New, outgoing path.
+ */
+function qorp_acf_json_save_point( $path ) {
+	// Update ACF JSON save path.
+	$path = __DIR__ . '/acf-json';
 
-// Register our ACF fields for Menu page.
-add_action(
-	'acf/include_fields',
-	function() {
-		$path                     = __DIR__ . '/acf-fields/menu-repeater.json';
-		$field_json               = json_decode( file_get_contents( $path ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-		$field_json['location']   = array(
-			array(
-				array(
-					'param'    => 'page_template',
-					'operator' => '==',
-					'value'    => 'default',
-				),
-			),
-		);
-		$field_json['local']      = 'json';
-		$field_json['local_file'] = $path;
-		acf_add_local_field_group( $field_json );
-	}
-);
+	return $path;
+}
+add_filter( 'acf/settings/save_json', 'qorp_acf_json_save_point' );
+
+/**
+ * Set a custom ACF JSON load path.
+ *
+ * @link https://www.advancedcustomfields.com/resources/local-json/#loading-explained
+ *
+ * @param array  $paths Existing, incoming path.
+ *
+ * @return array $paths New, outgoing path.
+ */
+function qorp_acf_json_load_point( $paths ) {
+	// Append our new path.
+	$paths[] = __DIR__ . '/acf-json';
+
+	return $paths;
+}
+add_filter( 'acf/settings/load_json', 'qorp_acf_json_load_point' );

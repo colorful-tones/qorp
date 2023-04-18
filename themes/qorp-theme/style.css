@@ -92,7 +92,7 @@
 @media (min-width:720px) {
 	.css-cols {
 		column-count: 2;
-		column-gap: var(--wp--preset--spacing--lg);
+		column-gap: var(--wp--preset--spacing--xl);
 	}
 }
 

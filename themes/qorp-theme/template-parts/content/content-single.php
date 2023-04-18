@@ -20,16 +20,16 @@
 				<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hero1.png" alt="<?php the_title(); ?>" height="631" width="1920" />
 			<?php endif; ?>
 		</figure>
-		<?php the_title( '<h1 class="entry-title has-global-padding is-vertically-aligned-center alignwide has-xx-large-font-size fw-bold" style="padding-top:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--lg);align-self:center;">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title has-global-padding is-vertically-aligned-center alignwide has-xx-large-font-size fw-bold" style="padding-top:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--xl);align-self:center;">', '</h1>' ); ?>
 	</header>
 
 	<?php if ( ! is_page() ) : ?>
 		<div class="has-global-padding is-layout-constrained wp-block-group alignfull">
-			<div class="wp-block-columns is-layout-flex alignwide" style="padding-top:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--lg);gap:var(--wp--preset--spacing--lg);">
+			<div class="wp-block-columns is-layout-flex alignwide" style="padding-top:var(--wp--preset--spacing--xl);padding-bottom:var(--wp--preset--spacing--xl);gap:var(--wp--preset--spacing--xl);">
 				<div class="is-layout-flow wp-block-column" style="flex-basis:20%">
-					<div class="is-nowrap is-layout-flex">
+					<div class="is-nowrap is-layout-flex" style="gap:var(--wp--preset--spacing--sm)">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ), '50', '' ); ?>
-						<div class="has-small-font-size">
+						<div class="has-x-small-font-size">
 							<p style="margin-top:0;margin-bottom:0;"><?php the_author_link(); ?></p>
 							<p style="margin-top:0;margin-bottom:0;"><?php the_date(); ?></p>
 						</div>

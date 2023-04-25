@@ -12,7 +12,7 @@ get_header();
 while ( have_posts() ) :
 	the_post();
 
-	get_template_part( 'template-parts/content/content-single' );
+	get_template_part( 'template-parts/content/content-page' );
 	?>
 
 	<style>
@@ -20,18 +20,18 @@ while ( have_posts() ) :
 			display:grid;
 			grid-gap:1.5rem;
 			grid-template-columns:repeat(auto-fill, minmax(8ch, 1fr));
-			margin:var(--wp--preset--spacing--lg) auto;
+			margin:var(--wp--preset--spacing--xl) auto;
 			max-width:var(--wp--style--global--content-size);
 		}
 		.acf-gallery a img {
 			display: block;
-			filter: grayscale(100%);
+			filter: sepia(12%) grayscale(80%);
 			height: auto;
 			transition: filter 0.7s ease;
 			width: 100%;
 		}
 		.acf-gallery a:hover img {
-			filter: grayscale(0);
+			filter: sepia(0) grayscale(0);
 		}
 	</style>
 
@@ -57,6 +57,16 @@ while ( have_posts() ) :
 	</div><!-- .acf-gallery -->
 
 	<?php
+	// ACF - Flexible Content fields.
+	$sections = get_field( 'qorp_post_sections' );
+
+	if ( $sections ) :
+		foreach ( $sections as $section ) :
+			$template = str_replace( '_', '-', $section['acf_fc_layout'] );
+			get_template_part( 'flexible-content/sections/' . $template, '', $section );
+		endforeach;
+	endif;
+
 endwhile; // End of the loop.
 
 get_footer();

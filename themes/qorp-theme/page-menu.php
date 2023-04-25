@@ -15,7 +15,7 @@ while ( have_posts() ) :
 	get_template_part( 'template-parts/content/content-single' );
 	?>
 
-	<div class="qorp-menu" style="margin-top:var(--wp--preset--spacing--lg);margin-bottom:var(--wp--preset--spacing--lg);">
+	<div class="qorp-menu" style="margin-top:var(--wp--preset--spacing--xl);margin-bottom:var(--wp--preset--spacing--xl);">
 		<div class="has-global-padding is-layout-constrained wp-block-group alignfull">
 			<div class="alignwide css-cols">
 				<?php
@@ -26,7 +26,7 @@ while ( have_posts() ) :
 					// Grab each menu section, e.g. Appetizers.
 					foreach ( $menu_categories as $menu_category ) :
 						?>
-						<div class="menu-category" style="margin-bottom: var(--wp--preset--spacing--lg);">
+						<div class="menu-category" style="margin-bottom: var(--wp--preset--spacing--xl);">
 							<?php
 							// Each section's menu category name, e.g. Appetizers.
 							$menu_category_name = $menu_category['qorp_menu_category_name'];
@@ -51,7 +51,7 @@ while ( have_posts() ) :
 									<?php
 									if ( $menu_item_diet_allergens ) :
 										?>
-										<p class="has-small-font-size has-primary-color menu-allergens" style="margin-top: 0;">
+										<p class="has-x-small-font-size has-primary-color menu-allergens" style="margin-top: 0;">
 											<?php
 											foreach ( $menu_item_diet_allergens as $diet_allergen ) :
 												?>

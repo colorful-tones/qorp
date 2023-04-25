@@ -6,6 +6,8 @@
  * @subpackage QORP
  */
 
+require_once __DIR__ . '/inc/disable-emojis.php';
+
 // Enqueue style sheet.
 function qorp_enqueue_style_sheet() {
 	wp_enqueue_style( 'qorp-theme', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
@@ -19,8 +21,7 @@ add_action( 'wp_enqueue_scripts', 'qorp_enqueue_style_sheet' );
 function qorp_register_block_styles() {
 
 	$block_styles = array(
-		'core/list' => array(
-			'no-disc' => __( 'No Disc', 'qorp' ),
+		'core/list' => array(			'no-disc' => __( 'No Disc', 'qorp' ),
 		),
 	);
 

@@ -5,6 +5,8 @@
 			"defaultDuotone": false,
 			"defaultGradients": false,
 			"defaultPalette": false,
+			"duotone": null,
+			"gradients": null,
 			"palette": [
 				{
 					"color": "#ffffff",

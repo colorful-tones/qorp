@@ -46,3 +46,10 @@ function qorp_acf_json_load_point( $paths ) {
 	return $paths;
 }
 add_filter( 'acf/settings/load_json', 'qorp_acf_json_load_point' );
+
+function qorp_acf_load_assets() {
+	$dir = plugin_dir_url( __FILE__ );
+
+	wp_enqueue_script( 'qorp-acf', $dir . '/assets/js/acf.js', array( 'acf-input' ), '0.1.0', false );
+}
+add_action( 'enqueue_block_editor_assets', 'qorp_acf_load_assets' );

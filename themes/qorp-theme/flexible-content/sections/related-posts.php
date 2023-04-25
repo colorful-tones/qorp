@@ -19,7 +19,7 @@ if ( ! $related_posts ) {
 			<?php setup_postdata( $post ); ?>
 			<div class="is-layout-flow wp-block-column">
 				<div class="entry-header has-base-color has-link-color">
-					<figure class="br-lg" style="--aspect-ratio: 3 / 2;margin-bottom: 0;border-radius:var(--wp--custom--border-radius--lg);">
+					<figure class="br-lg" style="--aspect-ratio: 2 / 1;margin-bottom: 0;border-radius:var(--wp--custom--border-radius--lg);">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail(); ?>
 						<?php else : ?>

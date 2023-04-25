@@ -30,7 +30,7 @@
 					<div class="is-nowrap is-layout-flex" style="gap:var(--wp--preset--spacing--sm)">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ), '50', '' ); ?>
 						<div class="has-x-small-font-size">
-							<p style="margin-top:0;margin-bottom:0;"><?php the_author_link(); ?></p>
+							<p class="fw-semibold" style="margin-top:0;margin-bottom:0;"><?php the_author_link(); ?></p>
 							<p style="margin-top:0;margin-bottom:0;"><?php the_date(); ?></p>
 						</div>
 					</div>

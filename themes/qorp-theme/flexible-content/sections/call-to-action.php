@@ -6,10 +6,9 @@
  * @subpackage QORP
  */
 
-$heading     = $args['heading'];
-$eyebrow     = $args['eyebrow'];
-$button_text = $args['button']['button_text'];
-$button_link = $args['button']['button_link'];
+$heading = $args['heading'];
+$eyebrow = $args['eyebrow'];
+$buttons = $args['buttons'];
 
 $bg_img     = get_template_directory_uri() . '/assets/images/cta-bg.png';
 $bg_img_css = 'background-image: url(' . esc_url( $bg_img ) . '); background-size: cover; background-repeat: no-repeat; background-position: center center;';
@@ -24,12 +23,10 @@ $bg_img_css = 'background-image: url(' . esc_url( $bg_img ) . '); background-siz
 			<?php if ( $heading ) : ?>
 				<h2 class="heading cta__heading fw-bold tt-u"><?php echo esc_html( $heading ); ?></h2>
 			<?php endif; ?>
-			<?php if ( $button_text && $button_link ) : ?>
+			<?php if ( $buttons ) : ?>
 				<div class="is-content-justification-center is-layout-flex wp-block-buttons">
-					<div class="wp-block-button">
-						<a href="<?php echo esc_url( $button_link ); ?>" class="wp-block-button__link has-secondary-background-color has-background wp-element-button"><?php echo esc_html( $button_text ); ?></a>
-					</div>
-				</div>
+					<?php qorp_render_buttons( $buttons ); ?>
+				</div><!-- .wp-block-buttons -->
 			<?php endif; ?>
 		</div>
 	</div>

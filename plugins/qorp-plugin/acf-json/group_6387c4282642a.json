@@ -64,11 +64,11 @@
                             "append": ""
                         },
                         {
-                            "key": "field_638a73474c07b",
-                            "label": "Button",
-                            "name": "button",
+                            "key": "field_64483f3c3b714",
+                            "label": "Buttons",
+                            "name": "buttons",
                             "aria-label": "",
-                            "type": "group",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -77,14 +77,19 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "block",
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
-                                    "key": "field_638a735f4c07c",
-                                    "label": "Button text",
-                                    "name": "button_text",
+                                    "key": "field_64483f493b715",
+                                    "label": "Button",
+                                    "name": "button",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "clone",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -93,28 +98,14 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "Learn more",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": ""
-                                },
-                                {
-                                    "key": "field_638a73764c07d",
-                                    "label": "Button link",
-                                    "name": "button_link",
-                                    "aria-label": "",
-                                    "type": "url",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
+                                    "clone": [
+                                        "group_6448299bb16cc"
+                                    ],
+                                    "display": "group",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0,
+                                    "parent_repeater": "field_64483f3c3b714"
                                 }
                             ]
                         }
@@ -268,7 +259,7 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_643db29049713",
+                            "key": "field_644833c9b4428",
                             "label": "Buttons",
                             "name": "buttons",
                             "aria-label": "",
@@ -285,11 +276,11 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Button",
+                            "button_label": "Add Row",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
-                                    "key": "field_6446c26cbfbcb",
+                                    "key": "field_644833e4b4429",
                                     "label": "Button",
                                     "name": "button",
                                     "aria-label": "",
@@ -303,13 +294,13 @@
                                         "id": ""
                                     },
                                     "clone": [
-                                        "group_642ee2e16b9c0"
+                                        "group_6448299bb16cc"
                                     ],
                                     "display": "group",
                                     "layout": "block",
                                     "prefix_label": 0,
                                     "prefix_name": 0,
-                                    "parent_repeater": "field_643db29049713"
+                                    "parent_repeater": "field_644833c9b4428"
                                 }
                             ]
                         },
@@ -366,5 +357,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682441195
+    "modified": 1682456422
 }

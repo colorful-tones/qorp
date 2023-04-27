@@ -2,11 +2,12 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
+			"customDuotone": false,
 			"defaultDuotone": false,
 			"defaultGradients": false,
 			"defaultPalette": false,
-			"duotone": null,
-			"gradients": null,
+			"duotone": [],
+			"gradients": [],
 			"palette": [
 				{
 					"color": "#ffffff",

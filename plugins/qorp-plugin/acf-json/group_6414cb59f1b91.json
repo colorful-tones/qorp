@@ -34,9 +34,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "228"
+                "value": "page"
             }
         ]
     ],
@@ -49,5 +49,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680877644
+    "modified": 1682613377
 }

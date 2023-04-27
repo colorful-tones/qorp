@@ -95,10 +95,9 @@ function qorp_render_button( $button = array() ) {
 		return;
 	}
 
-	$button        = $button['button'];
 	$button_text   = $button['text'];
 	$button_url    = $button['link'];
-	$button_class  = $button['style'] ? 'is-style-' . $button['style'] : 'is-style-fill';
+	$button_class  = 'is-style-' . $button['style'];
 	$button_color  = $button['color'];
 	$button_styles = '';
 

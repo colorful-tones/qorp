@@ -1,19 +1,11 @@
 {
     "name": "wpe/qorp",
-    "description": "Tutorial to demonstrate how to manage dependencies with Composer and deploy to WP Engine.",
+    "description": "A demo site for ACF.",
     "type": "project",
     "repositories": [
         {
-            "type": "package",
-            "package": {
-                "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "6.0.7",
-                "type": "wordpress-plugin",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t={%VERSION}"
-                }
-            }
+            "type": "composer",
+            "url": "https://connect.advancedcustomfields.com"
         },
         {
             "type": "composer",
@@ -22,25 +14,21 @@
     ],
     "require": {
         "composer/installers": "~1.0",
-        "ffraenz/private-composer-installer": "^5.0",
-        "advanced-custom-fields/advanced-custom-fields-pro": "*"
+        "wpengine/advanced-custom-fields-pro": "~6.2",
+        "wpackagist-plugin/simple-local-avatars": ">=2.7.5",
+        "wpackagist-plugin/safe-svg": ">=2.1.1"
     },
     "extra": {
         "installer-paths": {
             "plugins/{$name}": [
                 "type:wordpress-plugin"
             ]
-        },
-        "private-composer-installer": {
-            "dotenv-path": ".",
-            "dotenv-name": ".env"
         }
     },
     "license": "GPL-2.0+",
     "config": {
         "allow-plugins": {
             "composer/installers": true,
-            "ffraenz/private-composer-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "preferred-install": "dist",

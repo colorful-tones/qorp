@@ -45,6 +45,7 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+auth.json
 
 #---------------------------
 # Smart Plugin Manager
